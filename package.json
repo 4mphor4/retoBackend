@@ -6,9 +6,9 @@
     "node": "10.15.0",
     "npm": "6.4.1"
   },
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
-    "start": "node app",
+    "start": "npm start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
