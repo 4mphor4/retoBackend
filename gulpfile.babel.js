@@ -17,12 +17,12 @@ gulp.task("babel", () => {
 
 gulp.task(
   "nodemon",
-  ("babel",
-  () =>
+  gulp.parallel("babel", () =>
     plugins.nodemon({
       script: path.join("dist", "index.js"),
       ext: "js",
       ignore: ["node_modules/**/*.js", "dist/**/*.js"],
       tasks: ["babel"]
-    }))
+    })
+  )
 );
