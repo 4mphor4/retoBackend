@@ -24,7 +24,7 @@ _gulp2.default.task("babel", function () {
   return _gulp2.default.src(paths.js, { base: "." }).pipe(plugins.babel()).pipe(_gulp2.default.dest("dist"));
 });
 
-_gulp2.default.task("nodemon", _gulp2.default.series("babel", function () {
+_gulp2.default.task("nodemon", _gulp2.default.parallel("babel", function () {
   return plugins.nodemon({
     script: _path2.default.join("dist", "index.js"),
     ext: "js",
