@@ -17,7 +17,7 @@ gulp.task("babel", () => {
 
 gulp.task(
   "nodemon",
-  gulp.task("babel", () =>
+  gulp.parallel("babel", () =>
     plugins.nodemon({
       script: path.join("dist", "index.js"),
       ext: "js",
