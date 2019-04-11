@@ -19,7 +19,7 @@ if (config.env === "development") {
   mongoose.set("debug", true);
 }
 
-app.listen(config.port, () => {
+app.listen(process.env.PORT || config.port, () => {
   console.log(`app runnning on ${config.port} (${config.env})`);
 });
 
