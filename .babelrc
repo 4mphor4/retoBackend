@@ -1,12 +1,4 @@
 {
   "presets": ["es2015", "stage-2"],
-  "plugins": [
-    "add-module-exports",
-    [
-      "transform-inline-environment-variables",
-      {
-        "include": ["NODE_ENV"]
-      }
-    ]
-  ]
+  "plugins": ["add-module-exports"]
 }
