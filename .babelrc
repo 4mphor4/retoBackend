@@ -5,7 +5,7 @@
     [
       "transform-inline-environment-variables",
       {
-        "exclude": ["NODE_ENV", "PORT"]
+        "include": ["NODE_ENV", "PORT"]
       }
     ]
   ]
