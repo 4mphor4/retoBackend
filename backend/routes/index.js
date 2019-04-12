@@ -15,6 +15,9 @@ const auth = jwt({
 });
 
 //REGISTER AND LOGN
+router.get("", (req, res) => {
+  res.send("Hello World");
+});
 router.post("/register", ctrlAuth.register);
 router.post("/login", ctrlAuth.login);
 

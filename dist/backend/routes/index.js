@@ -45,6 +45,9 @@ var auth = (0, _expressJwt2.default)({
 });
 
 //REGISTER AND LOGN
+router.get("", function (req, res) {
+  res.send("Hello World");
+});
 router.post("/register", _authenticate2.default.register);
 router.post("/login", _authenticate2.default.login);
 
