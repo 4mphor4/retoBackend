@@ -36,7 +36,7 @@ if (_env2.default.env === "development") {
   _mongoose2.default.set("debug", true);
 }
 
-_express2.default.listen(_env2.default.port, function () {
+_express2.default.listen(_env2.default.port || process.env.PORT, function () {
   console.log("app runnning on " + _env2.default.port + " (" + _env2.default.env + ")");
 });
 
