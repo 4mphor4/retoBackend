@@ -14,12 +14,13 @@ function getPlayerDetails(req, res) {
           success: false,
           message: "Could not retrieve Player."
         });
+      } else {
+        return res
+          .json({ success: true, message: "Player Details", player })
+          .status(200);
       }
-      console.log(player);
-      return res
-        .json({ success: true, message: "Player Details", player })
-        .status(200);
     });
+  // console.log(player);
 }
 
 // UPDATE/EDIT PLAYER
