@@ -8,18 +8,18 @@ function getPlayerDetails(req, res) {
   User.findOne({ _id: req.payload._id }, "-salt -hash -Owner -Employee")
     .populate("Player.TeamID")
     .populate({ path: "Player.requests", select: "name" })
-    .exec((err, User) => {
+    .exec((err, player) => {
       if (err) {
         return res.json({
           success: false,
           message: "Could not retrieve Player."
         });
       }
-      console.log(User);
+      console.log(player);
       return res.json({
         success: true,
         message: "Player Details fetched successfully",
-        User
+        player
       });
     });
 }
