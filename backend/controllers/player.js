@@ -16,11 +16,9 @@ function getPlayerDetails(req, res) {
         });
       }
       console.log(player);
-      return res.json({
-        success: true,
-        // message: "Player Details fetched successfully",
-        player
-      });
+      return res
+        .json({ success: true, message: "Player Details", player })
+        .status(200);
     });
 }
 
