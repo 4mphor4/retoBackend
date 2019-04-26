@@ -18,8 +18,8 @@ function getPlayerDetails(req, res) {
       console.log(user);
       return res.json({
         success: true,
-        // message: "Player fetched successfully", get should not have a message body
-        user
+        message: "Player Details fetched successfully",
+        User
       });
     });
 }
